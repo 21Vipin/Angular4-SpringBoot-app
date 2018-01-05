@@ -1,0 +1,22 @@
+<h1> Enter City and code </h1>
+
+<div>
+      <label > City Name: </label>
+      <input type="text" [(ngModel)]="citys" /><br><br>
+      <label >Country Code: </label>
+      <input type="text" [(ngModel)]="codes" /><br><br>
+      <button (click)="saveForm()">Generate Report</button>
+</div>
+
+<div *ngIf="weather">
+    <h2>Weather Report</h2>
+    <h4> City: {{weather?.city?.name}}</h4>
+    <h4>Latitude: {{weather?.city?.coord.lat}}</h4>
+    <h4>Longitude: {{weather.city.coord.lon}}</h4>
+    <h4><strong>Temp</strong>: {{(weather.list[0].main.temp - 273.15).toFixed(2)}} Celsius</h4>
+    <h4><strong>tempMax: </strong>{{(weather.list[0].main.temp_max - 273.15).toFixed(2)}} Celsius  </h4>
+    <h4><strong>tempMin: </strong>{{(weather.list[0].main.temp_min - 273.15).toFixed(2)}} Celsius</h4>
+    <h4> <strong>The weather description: </strong> {{weather.list[0].weather[0].description}}</h4>
+    <h4> <strong>humidity: </strong>{{weather.list[0].main.humidity}} %</h4>
+    <h4> <strong>Wind Speed: </strong>{{weather.list[0].wind.speed}} m/sec</h4>
+</div>
