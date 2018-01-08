@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatRadioModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatButtonModule, MatToolbarModule, MatGridListModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -14,9 +14,11 @@ import { TodoService } from './todo.service';
 import {WeatherService} from './weather.service';
 import { TodoComponent } from './todo/todo.component';
 import { WeatherComponent } from './weather/weather.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: '', component: TodoComponent },
+  { path: 'todo', component: TodoComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'weather', component: WeatherComponent}
 ];
 
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TodoComponent,
-    WeatherComponent
+    WeatherComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    MatRadioModule
+    MatGridListModule
   ],
   providers: [TodoService, WeatherService],
   bootstrap: [AppComponent]

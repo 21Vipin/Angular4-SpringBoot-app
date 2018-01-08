@@ -18,4 +18,7 @@ export class AppComponent {
   navigateToWeather(): void {
     this.router.navigate(['weather']);
   }
+  navigateToToDo(): void {
+    this.router.navigate(['todo']);
+  }
 }
