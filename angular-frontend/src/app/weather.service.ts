@@ -5,8 +5,10 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class WeatherService {
-
-  apiKey = '54ccaebcd75e0fb38f16403af1dac86e';
+  
+  //Your API KEY from openweathermap.org
+  apiKey = '#####';
+  
   url;
   constructor(private  http: Http) {
     this.url = 'https://api.openweathermap.org/data/2.5/forecast?q=';
