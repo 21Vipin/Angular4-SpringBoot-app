@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,4 +13,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  navigateToWeather(): void {
+    this.router.navigate(['weather']);
+  }
+  navigateToToDo(): void {
+    this.router.navigate(['todo']);
+   }
 }
