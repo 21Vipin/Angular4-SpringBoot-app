@@ -15,10 +15,4 @@ export class AppComponent {
   navigateToHome(): void {
     this.router.navigate(['']);
   }
-  navigateToWeather(): void {
-    this.router.navigate(['weather']);
-  }
-  navigateToToDo(): void {
-    this.router.navigate(['todo']);
-  }
 }
