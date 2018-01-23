@@ -18,7 +18,7 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'todo', component: TodoComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'weather', component: WeatherComponent}
 ];
 
